@@ -23,3 +23,119 @@ h2 {
   font-family: "PT Sans NarrowBold";
   text-transform: uppercase;
 }
+
+body {
+  background: #000000 url("/barbershop.png") no-repeat 50% 3px;
+  background-size: 1200px auto;
+}
+
+.catalog-header {
+  min-height: 70px;
+}
+
+.container {
+  width: 940px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0 10px;
+}
+
+.header-navigation {
+  width: 780px;
+  float: left;
+  height: 70px;
+}
+
+.user-block {
+  width: 140px;
+  float: right;
+  min-height: 70px;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+h1 {
+  padding: 10px;
+}
+
+.left-block {
+  width: 220px;
+  float: left;
+}
+
+.right-block {
+  min-height: 700px;
+  width: 700px;
+  float: right;
+  padding: 10px;
+}
+
+
+}
+
+/*======================================
+ Системное оформление - не изменять
+=======================================*/
+body {
+  padding: 3px;
+}
+body> *,
+body> *> *,
+body> *> *> * {
+  position: relative;
+}
+body> *::before,
+body> *> *::before,
+body> *> *> *::before {
+  content: "";
+  position: absolute;
+  height: 24px;
+  padding: 2px 5px;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "Courier New", monotype;
+  white-space: nowrap;
+}
+body> *::before {
+  top: -3px;
+  left: -3px;
+}
+body> *> *::before {
+  top: -3px;
+  left: -3px;
+}
+body> *> *> *::before {
+  top: 0;
+  left: 0;
+}
+body> * {
+  background: rgba(0, 128, 0, 0.2);
+  box-shadow: 0 0 0 3px green;
+}
+body> *::before {
+  color: white;
+  background: green;
+}
+body> *> * {
+  background: rgba(255, 45, 82, 0.2);
+  box-shadow: 0 0 0 3px rgb(255, 45, 82);
+}
+body> *> *::before {
+  color: white;
+  background: rgb(255, 45, 82);
+}
+.main-header::before {
+  content: ".main-header";
+}
+.container::before {
+  content: ".container";
+}
+.main-header .container::before {
+  top: auto;
+  bottom: -28px;
+}
