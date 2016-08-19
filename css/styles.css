@@ -1,9 +1,19 @@
+img {
+  opacity: 0;
+}
+
+* {
+  color: transparent;
+}
+
 body {
   font-size: 14px;
   line-height: 24px;
   font-weight: normal;
   color: #000000;
   font-family: "PT Sans NarrowBold";
+  margin: 0px;
+  background: #000000 url("../barbershop-item.png") no-repeat 50% 3px;
 }
 
 h1 {
@@ -22,15 +32,7 @@ h2 {
   color: #000000;
   font-family: "PT Sans NarrowBold";
   text-transform: uppercase;
-}
-
-body {
-  background: #000000 url("/barbershop.png") no-repeat 50% 3px;
-  background-size: 1200px auto;
-}
-
-.catalog-header {
-  min-height: 70px;
+  margin: 0px;
 }
 
 .container {
@@ -40,16 +42,32 @@ body {
   padding: 0 10px;
 }
 
+.catalog-header {
+  margin-bottom: 50px;
+  background-color: #000000;
+}
+
 .header-navigation {
   width: 780px;
   float: left;
-  height: 70px;
+  /* для разметки */
+  height: 75px;
+}
+
+.header-navigation ul {
+  padding: 0px;
+  list-style: none;
+}
+
+.header-navigation li {
+  display: inline;
 }
 
 .user-block {
   width: 140px;
   float: right;
-  min-height: 70px;
+  /* для разметки */
+  height: 75px;
 }
 
 .clearfix::after {
@@ -58,84 +76,171 @@ body {
   clear: both;
 }
 
-h1 {
-  padding: 10px;
+.page-caption {
+  height: 40px;
+  margin-bottom: 20px;
+}
+
+.breadcrumbs {
+  /* для разметки */
+  min-height: 25px;
+  margin-bottom: 50px;
+}
+
+.breadcrumbs ul {
+  padding: 0px;
+  list-style: none;
+}
+
+.breadcrumbs li {
+  display: inline;
 }
 
 .left-block {
   width: 220px;
   float: left;
+  margin-right: 10px;
+  /* для разметки */
+  min-height: 600px;
 }
 
 .right-block {
-  min-height: 700px;
   width: 700px;
   float: right;
+  margin-left: 10px;
+}
+
+.item {
+  width: 220px;
+  height: 290px;
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  background: #ffffff;
+}
+
+.right-block article:nth-child(3n) {
+  margin-right: 0px;
+}
+
+p {
+  margin: 0px;
+}
+
+.buy-block {
+  height: 44px;
+}
+
+.goods {
+  margin-bottom: 25px;
+}
+
+.pagination {
+  width: 700px;
+  clear: both;
+  list-style: none;
+  padding: 0px;
+  /* для разметки */
+  height: 44px;
+  margin: 0px;
+}
+
+.pagination li {
+  display: inline;
+}
+
+.catalog-footer {
+  margin-top: 25px;
+  padding-top: 60px;
+  padding-bottom: 40px;
+  /*  background: #242424 url("../img/footer-back.png") repeat;  */
+}
+
+.footer-contacts {
+  float: left;
+  width: 320px;
+  /* для разметки */
+  min-height: 90px;
+  margin-right: 80px;
+}
+
+.footer-social {
+  float: left;
+  width: 140px;
+  /* для разметки */
+  min-height: 90px;
+}
+
+.footer-copyright {
+  float: right;
+  width: 140px;
+  /* для разметки */
+  min-height: 90px;
+}
+
+.item-photos {
+  width: 460px;
+  font-size: 0px;
+  float: left;
+}
+
+.item-photos img {
+  margin-top: 20px;
+  margin-right: 20px;
+}
+
+.item-photos img:last-child {
+  margin-right: 0px;
+}
+
+.item-photos img:first-child {
+  margin-right: 0px;
+  margin-top: 0px;
+}
+
+.item-info {
+  float: right;
+  width: 400px;
+  text-transform: uppercase;
+}
+
+.item-description {
+  padding-top: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
+
+.item-status {
+  float: left;
+  width: 170px;
+}
+
+.item-article {
+  float: right;
+  width: 200px;
+}
+
+.item-allinfo {
+  clear: both;
+  margin-top: 50px;
+  /* для разметки прибить высоту, с невлезающим текстом разобраться потом*/
+  height: 165px;
+}
+
+.buy-block {
   padding: 10px;
+  margin-bottom: 50px;
 }
 
-
+.item-price {
+  width: 110px;
+  float: left;
+  min-height: 44px;
 }
 
-/*======================================
- Системное оформление - не изменять
-=======================================*/
-body {
-  padding: 3px;
-}
-body> *,
-body> *> *,
-body> *> *> * {
-  position: relative;
-}
-body> *::before,
-body> *> *::before,
-body> *> *> *::before {
-  content: "";
-  position: absolute;
-  height: 24px;
-  padding: 2px 5px;
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 24px;
-  font-family: "Courier New", monotype;
-  white-space: nowrap;
-}
-body> *::before {
-  top: -3px;
-  left: -3px;
-}
-body> *> *::before {
-  top: -3px;
-  left: -3px;
-}
-body> *> *> *::before {
-  top: 0;
-  left: 0;
-}
-body> * {
-  background: rgba(0, 128, 0, 0.2);
-  box-shadow: 0 0 0 3px green;
-}
-body> *::before {
-  color: white;
-  background: green;
-}
-body> *> * {
-  background: rgba(255, 45, 82, 0.2);
-  box-shadow: 0 0 0 3px rgb(255, 45, 82);
-}
-body> *> *::before {
-  color: white;
-  background: rgb(255, 45, 82);
-}
-.main-header::before {
-  content: ".main-header";
-}
-.container::before {
-  content: ".container";
-}
-.main-header .container::before {
-  top: auto;
-  bottom: -28px;
+.item-buy {
+  width: 80px;
+  float: left;
+  min-height: 44px;
 }
